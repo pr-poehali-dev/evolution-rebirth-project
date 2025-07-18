@@ -5,9 +5,9 @@ import Icon from "@/components/ui/icon";
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-bio-dark via-slate-900 to-bio-dark">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-teal-50 dark:from-background dark:via-slate-800 dark:to-background">
       {/* Header */}
-      <header className="relative z-10 border-b border-bio-cyan/20 bg-bio-dark/90 backdrop-blur-sm">
+      <header className="relative z-10 border-b border-bio-cyan/20 bg-white/80 dark:bg-bio-dark/90 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -31,9 +31,14 @@ export default function Index() {
               <a href="#evolution" className="text-bio-cyan hover:text-bio-green transition-colors">
                 Эволюция
               </a>
-              <Button className="bg-gradient-to-r from-bio-cyan to-bio-green text-bio-dark hover:from-bio-green hover:to-bio-cyan">
-                Начать игру
-              </Button>
+              <div className="flex items-center gap-3">
+                <Button variant="outline" className="border-bio-cyan text-bio-cyan hover:bg-bio-cyan hover:text-white">
+                  Вход
+                </Button>
+                <Button className="bg-gradient-to-r from-bio-cyan to-bio-green text-white hover:from-bio-green hover:to-bio-cyan">
+                  Регистрация
+                </Button>
+              </div>
             </nav>
           </div>
         </div>
@@ -41,7 +46,7 @@ export default function Index() {
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-bio-cyan/10 via-transparent to-bio-green/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-bio-cyan/5 via-transparent to-bio-green/5"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <Badge className="mb-6 bg-bio-cyan/20 text-bio-cyan border-bio-cyan/30 animate-glow">
@@ -90,7 +95,7 @@ export default function Index() {
       </section>
 
       {/* Game Features */}
-      <section id="features" className="py-20 bg-bio-dark/30">
+      <section id="features" className="py-20 bg-white/50 dark:bg-bio-dark/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h3 className="text-4xl font-montserrat font-bold text-bio-cyan mb-4">
@@ -102,7 +107,7 @@ export default function Index() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-bio-dark/70">
+            <Card className="bg-white/70 dark:bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-white/90 dark:hover:bg-bio-dark/70 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-12 h-12 bg-gradient-to-br from-bio-cyan to-bio-green rounded-lg flex items-center justify-center mb-4">
                   <Icon name="Zap" className="w-6 h-6 text-bio-dark" />
@@ -116,10 +121,10 @@ export default function Index() {
               </CardHeader>
             </Card>
             
-            <Card className="bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-bio-dark/70">
+            <Card className="bg-white/70 dark:bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-white/90 dark:hover:bg-bio-dark/70 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-12 h-12 bg-gradient-to-br from-bio-green to-bio-teal rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Dna" className="w-6 h-6 text-bio-dark" />
+                  <Icon name="Dna" className="w-6 h-6 text-white" />
                 </div>
                 <CardTitle className="text-bio-cyan font-montserrat">
                   Эволюционные ступени
@@ -130,7 +135,7 @@ export default function Index() {
               </CardHeader>
             </Card>
             
-            <Card className="bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-bio-dark/70">
+            <Card className="bg-white/70 dark:bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-white/90 dark:hover:bg-bio-dark/70 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-12 h-12 bg-gradient-to-br from-bio-teal to-bio-blue rounded-lg flex items-center justify-center mb-4">
                   <Icon name="Swords" className="w-6 h-6 text-bio-dark" />
@@ -144,7 +149,7 @@ export default function Index() {
               </CardHeader>
             </Card>
             
-            <Card className="bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-bio-dark/70">
+            <Card className="bg-white/70 dark:bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-white/90 dark:hover:bg-bio-dark/70 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-12 h-12 bg-gradient-to-br from-bio-purple to-bio-cyan rounded-lg flex items-center justify-center mb-4">
                   <Icon name="Shield" className="w-6 h-6 text-bio-dark" />
@@ -158,7 +163,7 @@ export default function Index() {
               </CardHeader>
             </Card>
             
-            <Card className="bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-bio-dark/70">
+            <Card className="bg-white/70 dark:bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-white/90 dark:hover:bg-bio-dark/70 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-12 h-12 bg-gradient-to-br from-bio-green to-bio-cyan rounded-lg flex items-center justify-center mb-4">
                   <Icon name="Users" className="w-6 h-6 text-bio-dark" />
@@ -172,7 +177,7 @@ export default function Index() {
               </CardHeader>
             </Card>
             
-            <Card className="bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-bio-dark/70">
+            <Card className="bg-white/70 dark:bg-bio-dark/50 border-bio-cyan/20 hover:border-bio-cyan/40 transition-all duration-300 hover:bg-white/90 dark:hover:bg-bio-dark/70 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-12 h-12 bg-gradient-to-br from-bio-teal to-bio-green rounded-lg flex items-center justify-center mb-4">
                   <Icon name="Cpu" className="w-6 h-6 text-bio-dark" />
@@ -275,7 +280,7 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-bio-cyan/10 via-bio-green/10 to-bio-teal/10">
+      <section className="py-20 bg-gradient-to-r from-bio-cyan/5 via-bio-green/5 to-bio-teal/5">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-4xl font-montserrat font-bold text-bio-cyan mb-4">
@@ -306,7 +311,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-bio-dark border-t border-bio-cyan/20">
+      <footer className="py-12 bg-white/80 dark:bg-bio-dark border-t border-bio-cyan/20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-3 mb-4 md:mb-0">
@@ -318,8 +323,11 @@ export default function Index() {
                   Эволюция Возрождение
                 </h4>
                 <p className="text-sm text-bio-green/70">
-                  © 2024 Все права защищены
+                  © 2024 Ki nala Atum, OneDeadMachine, Porweks, sdoba express music
                 </p>
+                <a href="https://vk.com/onedeadmachine_pub" className="text-sm text-bio-cyan hover:text-bio-green transition-colors">
+                  Сообщество ВК
+                </a>
               </div>
             </div>
             
