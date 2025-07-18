@@ -102,6 +102,6 @@
   }
 
   html {
-    @apply dark;
+    @apply light;
   }
 }
